@@ -10,8 +10,25 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.15.6",
     "@astrojs/check": "^0.9.3",
+    "@astrojs/db": "^0.14.1",
+    "@astrojs/mdx": "^3.1.6",
+    "@astrojs/netlify": "^5.5.2",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/web-vitals": "^3.0.0",
+    "@unocss/astro": "^0.62.4",
+    "astro": "^4.15.6",
+    "rehype-mdx-code-props": "^3.0.1",
+    "sass": "^1.78.0",
     "typescript": "^5.6.2"
-  }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.1",
+    "@unocss/reset": "^0.62.4",
+    "taze": "^0.16.9",
+    "unocss": "^0.62.4"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
 }

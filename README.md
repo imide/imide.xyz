@@ -10,7 +10,6 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-
 ## TODO
 
 - Setup renovate, netlify, actions and whatever other jargin missing

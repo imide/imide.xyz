@@ -1,0 +1,75 @@
+---
+import '../styles/global.css'
+import Navbar from '../components/Navbar.astro'
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="description" content="imide's website" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/pfpr.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Favicons -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://imide.xyz/profilepicture.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://imide.xyz/profilepicture.png`" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="overflow-x-hidden bg-bg">
+    <Navbar />
+    <slot />
+  </body>
+</html>
+<style is:global lang="css">
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  *::-webkit-scrollbar {
+    width: 15px;
+    background: #090909;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #222;
+    border-radius: 3px;
+  }
+
+  :root {
+    --astro-code-color-text: #dee1e6;
+    --astro-code-color-background: #060606;
+    --astro-code-token-constant: #d466e9;
+    --astro-code-token-string: #56966e;
+    --astro-code-token-comment: #485263;
+    --astro-code-token-keyword: #c14d53;
+    --astro-code-token-parameter: #c14d53;
+    --astro-code-token-function: #6a9f98;
+    --astro-code-token-string-expression: #56966e;
+    --astro-code-token-punctuation: #dee1e6;
+    --astro-code-token-link: #dee1e6;
+  }
+</style>

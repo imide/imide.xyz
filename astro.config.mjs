@@ -1,10 +1,7 @@
-import db from '@astrojs/db'
 import mdx from '@astrojs/mdx'
 import netlify from '@astrojs/netlify'
 import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
-
-import webVitals from '@astrojs/web-vitals'
 
 import unocss from '@unocss/astro'
 
@@ -28,7 +25,7 @@ export default defineConfig({
     },
     remarkPlugins: [remarkMdxCodeMeta],
     gfm: false,
-  }), sitemap(), db(), webVitals(), icon(), svelte()],
+  }), sitemap(), icon(), svelte()],
   output: 'server',
   adapter: netlify(),
 })

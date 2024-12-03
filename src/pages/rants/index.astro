@@ -1,7 +1,17 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 
-let allPosts = await Astro.glob('../../rants/*.mdx')
+export interface BlogPost {
+  frontmatter: {
+    title: string;
+    date: string;
+    category: string;
+    description: string;
+  };
+  file: string;
+}
+
+let allPosts = Object.values(import.meta.glob<BlogPost>('../../rants/*.mdx', { eager: true }))
 let arr = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
 ---
 

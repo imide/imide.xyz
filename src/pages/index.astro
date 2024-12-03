@@ -4,7 +4,10 @@ import Repos from '../components/svelte/repos.svelte'
 
 import { Image } from 'astro:assets'
 import localPFPImage from '../images/profilepicture.png'
-let allPosts = await Astro.glob('../rants/*.mdx')
+
+import type { BlogPost } from './rants/index.astro'
+
+let allPosts = Object.values(import.meta.glob<BlogPost>('../rants/*.mdx', { eager: true }))
 let rants = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
 let a = [rants[0], rants[1], rants[2], rants[3]]
 ---
@@ -15,7 +18,7 @@ let a = [rants[0], rants[1], rants[2], rants[3]]
       <div class="flex items-center gap-4">
         <Image src={localPFPImage} alt="pfp" class="h-8 w-8 rounded-full border-[1px] border-fg" />
         <h1 class="self-end text-left text-2xl text-fg">imide</h1>
-        <h1 class="text-md self-end text-left text-gray-500">15M (he/him)</h1>
+        <h1 class="text-md self-end text-left text-gray-500">16M (he/him)</h1>
       </div>
       <p class="mt-8 text-[20px] text-bright">hey. i am imide. welcome to my website.</p>
       <p class="mt-4 text-[20px] text-bright">
@@ -68,7 +71,7 @@ let a = [rants[0], rants[1], rants[2], rants[3]]
       <div class="centered my-8 inline-block h-[2px] bg-bg3 px-16">
         <p class="mt-8 text-[20px] text-bright">
           made with <span class="text-fg">❤️</span> from colorado. <br />
-          heavily based on <a target="_blank" href="https://github.com/chadcat7/chadcat7.github.io" class="text-fg underline"> chadcat7's website (thank you!) </a>
+          heavily based on <a target="_blank" href="https://github.com/chadcat7/chadcat7.github.io" class="text-fg underline"> namishh's website (thank you!) </a>
           <br />
         </p>
       </div>

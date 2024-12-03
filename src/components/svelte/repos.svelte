@@ -8,14 +8,18 @@
         stargazers_count: number;
     }
 
-    export let FEATURED_REPOS: string[] = [
+    interface Props {
+        FEATURED_REPOS?: string[];
+    }
+
+    let { FEATURED_REPOS = [
         'imide.xyz',
         'ChatHistoryPlus',
         'DarkKore-reborn',
         'met-linux'
-    ];
+    ] }: Props = $props();
 
-    let repos: Repo[] = [];
+    let repos: Repo[] = $state([]);
 
     onMount(async () => {
         await fetchRepos();

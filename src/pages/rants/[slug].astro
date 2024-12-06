@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro'
 import type { GetStaticPaths } from 'astro'
 
 import { Image } from 'astro:assets'
-import localPFPRImage from '../../images/pfpr.png'
+import localPFPImage from '../../images/profilepicture.png'
 
 interface Post {
   Content: any
@@ -43,10 +43,10 @@ const { title, description, date } = frontmatter
       </div>
       <div class="self-end">
         <div class="mt-4 flex items-center justify-end gap-2">
-          <Image src={localPFPRImage} class="h-8 rounded-[100px]" alt="round pfp" />
+          <Image src={localPFPImage} class="h-8 w-8 rounded-[100px] border-[1px] border-fg" alt="round pfp" />
           <p>imide</p>
         </div>
-        <div class="-mt-4 text-right">{date}</div>
+        <div class="mt-4 text-right">{date}</div>
       </div>
     </div>
   </div>

@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/svelte": "7.0.1",
     "@unocss/astro": "^0.65.0",
-    "astro": "5.0.2",
+    "astro": "5.0.3",
     "astro-icon": "^1.1.4",
     "rehype-mdx-code-props": "^3.0.1",
     "svelte": "^5.5.3",

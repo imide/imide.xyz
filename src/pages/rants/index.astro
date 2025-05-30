@@ -3,12 +3,12 @@ import Layout from '../../layouts/Layout.astro'
 
 export interface BlogPost {
   frontmatter: {
-    title: string;
-    date: string;
-    category: string;
-    description: string;
-  };
-  file: string;
+    title: string
+    date: string
+    category: string
+    description: string
+  }
+  file: string
 }
 
 let allPosts = Object.values(import.meta.glob<BlogPost>('../../rants/*.mdx', { eager: true }))

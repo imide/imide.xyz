@@ -3,7 +3,6 @@ import {
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
   presetWebFonts,
   transformerDirectives,
 } from 'unocss'
@@ -17,7 +16,6 @@ export default defineConfig({
   },
 
   presets: [
-    presetUno({}),
     presetIcons({
       scale: 1.2,
       extraProperties: {

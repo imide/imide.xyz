@@ -1,14 +1,15 @@
 import mdx from '@astrojs/mdx'
-import netlify from '@astrojs/netlify'
 import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
 
+import vercel from '@astrojs/vercel'
+
 import unocss from '@unocss/astro'
+
+import icon from 'astro-icon'
 
 // @ts-check
 import { defineConfig } from 'astro/config'
-
-import icon from 'astro-icon'
 
 import remarkMdxCodeMeta from 'rehype-mdx-code-props'
 
@@ -27,5 +28,5 @@ export default defineConfig({
     gfm: false,
   }), sitemap(), icon(), svelte()],
   output: 'server',
-  adapter: netlify(),
+  adapter: vercel(),
 })

@@ -4,8 +4,8 @@ import {
   presetIcons,
   presetTypography,
   presetWebFonts,
+  presetWind3,
   transformerDirectives,
-  presetWind3
 } from 'unocss'
 
 export default defineConfig({

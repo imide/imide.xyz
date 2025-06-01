@@ -2,6 +2,7 @@
 import '../styles/global.css'
 import Navbar from '../components/Navbar.astro'
 const { title, description } = Astro.props
+import Analytics from '@vercel/analytics/astro'
 ---
 
 <!doctype html>
@@ -73,3 +74,5 @@ const { title, description } = Astro.props
     --astro-code-token-link: #dee1e6;
   }
 </style>
+
+<Analytics />

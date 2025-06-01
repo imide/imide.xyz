@@ -37,6 +37,7 @@ import Analytics from '@vercel/analytics/astro'
     <meta property="twitter:image" content="https://imide.xyz/profilepicture.png`" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <Analytics />
   </head>
   <body class="overflow-x-hidden bg-bg">
     <Navbar />
@@ -74,5 +75,3 @@ import Analytics from '@vercel/analytics/astro'
     --astro-code-token-link: #dee1e6;
   }
 </style>
-
-<Analytics />

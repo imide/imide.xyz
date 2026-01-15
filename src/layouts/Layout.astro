@@ -3,6 +3,7 @@ import '../styles/global.css'
 import Navbar from '../components/Navbar.astro'
 const { title, description } = Astro.props
 import Analytics from '@vercel/analytics/astro'
+import SpeedInsights from '@vercel/speed-insights/astro'
 ---
 
 <!doctype html>
@@ -38,6 +39,7 @@ import Analytics from '@vercel/analytics/astro'
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <Analytics />
+    <SpeedInsights />
   </head>
   <body class="overflow-x-hidden bg-bg">
     <Navbar />

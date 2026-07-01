@@ -23,22 +23,29 @@ let a = [rants[0], rants[1], rants[2], rants[3]]
       <p class="mt-8 text-[20px] text-bright">hey. i am imide. welcome to my website.</p>
       <p class="mt-4 text-[20px] text-bright">
         a rather dumb programmer. pretty good in <span class="text-fg">go</span>
-        and <span class="text-fg">minecraft building</span>. i enjoy <span class="text-fg">sports</span>, <span class="text-fg">coding</span>, and <span class="text-fg">movies</span>.
+        and <span class="text-fg">minecraft building</span>. i enjoy <span class="text-fg">sports</span>, <span
+          class="text-fg">coding</span
+        >, and <span class="text-fg">movies</span>.
         <br />
-        i am mostly a backend developer, but i want to become a fullstack dev. i sometimes rant <span><a href="/rants" class="text-fg underline">about random things</a></span> and <span
-          ><a href="https://github.com/imide?tab=repositories" class="text-fg underline">code junk</a></span
-        > in my free time.
+        i am mostly a backend developer, but i want to become a fullstack dev. i sometimes rant <span
+          ><a href="/rants" class="text-fg underline">about random things</a></span
+        > and <span><a href="https://github.com/imide?tab=repositories" class="text-fg underline">code junk</a></span> in
+        my free time.
       </p>
       <p class="mt-2 text-[20px] text-bright">water polo enthusiant. strong towns supporter.</p>
       <div class="my-8 inline-block h-[2px] bg-bg3 px-16"></div>
       <h1 class="text-2xl text-fg">
-        <span class="text-gray-500">(some of my def terribly coded)</span> projects over time <a href="https://github.com/imide?tab=repositories"><i class="i-ph-arrow-right ml-2 text-sm"></i></a>
+        <span class="text-gray-500">(some of my def terribly coded)</span> projects over time <a
+          href="https://github.com/imide?tab=repositories"><i class="i-ph-arrow-right ml-2 text-sm"></i></a
+        >
       </h1>
       <div class="cardscontainer mt-4 flex flex-wrap justify-center gap-4">
         <Repos client:load />
       </div>
       <h1 class="mb-2 mt-8 text-2xl text-fg">
-        <span class="text-gray-500">recent</span> rants <a href="/rants"><i class="i-ph-arrow-right ml-2 text-sm"></i></a>
+        <span class="text-gray-500">recent</span> rants <a href="/rants"
+          ><i class="i-ph-arrow-right ml-2 text-sm"></i></a
+        >
       </h1>
       <ul class="list-inside">
         {
@@ -46,9 +53,13 @@ let a = [rants[0], rants[1], rants[2], rants[3]]
             if (i && i.file) {
               return (
                 <li class="my-6 w-full cursor-pointer">
-                  <a class="flex w-full justify-between" href={`/rants/${i.file?.split('/').pop()?.split('.').shift()}`}>
+                  <a
+                    class="flex w-full justify-between"
+                    href={`/rants/${i.file?.split('/').pop()?.split('.').shift()}`}
+                  >
                     <p class="text-fg">
-                      {j + 1}. {i.frontmatter.title} <span class="ml-2 text-gray-500 md:ml-8">{i.frontmatter.date}</span>
+                      {j + 1}. {i.frontmatter.title}{' '}
+                      <span class="ml-2 text-gray-500 md:ml-8">{i.frontmatter.date}</span>
                     </p>
                   </a>
                 </li>
@@ -59,19 +70,28 @@ let a = [rants[0], rants[1], rants[2], rants[3]]
       </ul>
       <div class="my-8 inline-block h-[2px] bg-bg3 px-16"></div>
       <p class="text-[20px] text-bright">
-        you can find me at <a target="_blank" href="https://discord.com/users/555915168932954112" class="text-fg underline">discord</a>
-        , <a href="https://reddit.com/u/ZacsNotInnocent" target="_blank" class="text-fg underline">reddit (rarely use)</a> and <a
+        you can find me at <a
           target="_blank"
-          href="https://github.com/imide"
-          class="text-fg underline">github</a
-        >.
+          href="https://discord.com/users/555915168932954112"
+          class="text-fg underline">discord</a
+        >
+        , <a href="https://reddit.com/u/ZacsNotInnocent" target="_blank" class="text-fg underline"
+          >reddit (rarely use)</a
+        > and <a target="_blank" href="https://github.com/imide" class="text-fg underline">github</a>.
         <br />
-        you can also contact me via my mail address <span class="text-fg">imide@imide.xyz</span>. anyways, yeah. this is my website.
+        you can also contact me via my mail address <span class="text-fg">imide@imide.xyz</span>. anyways, yeah. this is
+        my website.
       </p>
       <div class="centered my-8 inline-block h-[2px] bg-bg3 px-16">
         <p class="mt-8 text-[20px] text-bright">
           made with <span class="text-fg">❤️</span> from colorado. <br />
-          heavily based on <a target="_blank" href="https://github.com/chadcat7/chadcat7.github.io" class="text-fg underline"> namishh's website (thank you!) </a>
+          heavily based on <a
+            target="_blank"
+            href="https://github.com/chadcat7/chadcat7.github.io"
+            class="text-fg underline"
+          >
+            namishh's website (thank you!)
+          </a>
           <br />
         </p>
       </div>

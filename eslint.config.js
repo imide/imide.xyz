@@ -5,10 +5,8 @@ export default antfu({
   unocss: true,
   astro: true,
   svelte: true,
+  e18e: true,
+  pnpm: false,
 
-  ignores: [
-    '.netlify',
-    '.astro',
-    '.dist',
-  ],
+  ignores: ['.netlify', '.astro', '.dist'],
 })

@@ -1,4 +1,5 @@
-.centered
-    justify-content: center
-    align-items: center
-    text-align: center
+.centered {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

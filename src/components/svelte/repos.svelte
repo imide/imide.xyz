@@ -12,18 +12,19 @@
     FEATURED_REPOS?: string[]
   }
 
-  const { FEATURED_REPOS = [
-    'imide.xyz',
-    'ChatHistoryPlus',
-    'DarkKore-reborn',
-    'met-linux',
-  ] }: Props = $props()
+  const {
+    FEATURED_REPOS = [
+      'imide.xyz',
+      'ChatHistoryPlus',
+      'DarkKore-reborn',
+      'DebateShare',
+    ],
+  }: Props = $props()
 
   let repos: Repo[] = $state([])
 
   onMount(async () => {
     await fetchRepos()
-    await fetchMetRepos()
   })
 
   async function fetchRepos() {
@@ -33,18 +34,10 @@
     const data: Repo[] = await response.json()
     repos = data.filter(repo => FEATURED_REPOS.includes(repo.name))
   }
-
-  async function fetchMetRepos() {
-    const response = await fetch(
-      'https://api.github.com/orgs/METProject/repos',
-    )
-    const data: Repo[] = await response.json()
-    repos = repos.concat(data)
-  }
 </script>
 
 <div class='cardscontainer mt-4 flex flex-wrap justify-center gap-4'>
-  {#each repos as repo}
+  {#each repos as repo (repo.html_url)}
     <a
       class='w-full flex flex-col rounded-xl bg-mbg p-4 text-bright md:w-[15.5rem]'
       href={repo.html_url}
